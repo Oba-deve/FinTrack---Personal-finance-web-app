@@ -1,0 +1,60 @@
+/* FinTrack - Custom Styles */
+
+/* Smooth scrolling for the whole page */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Subtle focus-visible ring consistency across browsers */
+*:focus-visible {
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.25);
+}
+
+/* Custom scrollbar for transaction list */
+#transactionList::-webkit-scrollbar {
+    width: 6px;
+}
+
+#transactionList::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+#transactionList::-webkit-scrollbar-thumb {
+    background-color: #cbd5e1;
+    border-radius: 20px;
+}
+
+#transactionList::-webkit-scrollbar-thumb:hover {
+    background-color: #94a3b8;
+}
+
+/* Filter button active state */
+.filter-btn.active {
+    background-color: #ffffff;
+    color: #2563EB;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+}
+
+/* Empty state subtle animation */
+#emptyState {
+    animation: fadeIn 0.3s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(4px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Chart canvas responsive fix */
+#expenseChart {
+    width: 100% !important;
+    height: 100% !important;
+}
